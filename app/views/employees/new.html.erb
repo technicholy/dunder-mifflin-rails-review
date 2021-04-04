@@ -1,0 +1,15 @@
+<div>
+<h1>New</h1>
+</div>
+<%= form_for @employee do |f| %>
+<%= f.label :first_name, "First Name" %>
+<%= f.text_field :first_name %>
+<%= f.label :last_name, "Last Name" %>
+<%= f.text_field :last_name %>
+<%= f.label :alias, "Alias" %>
+<%= f.text_field :alias %>
+<%= f.label :office, "Office" %>
+<%= f.text_field :office %>
+<%= f.collection_select( :dog_id, @dogs, :id, :name) %>
+<%= f.submit %>
+<% end %>

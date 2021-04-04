@@ -1,0 +1,17 @@
+<h2><%= @dog.name %></h2>
+<ul>
+<li>Breed: <%= @dog.breed %></li>
+<li>Age: <%= @dog.age %></li>
+<% if @dog.employees.size > 1%>
+  <ul>
+    <% @dog.employees.each do |emp| %>
+      <li>
+        <%= link_to  emp.name, employee_path(emp.id) %>
+      </li>
+    <% end %>    
+  </ul>
+<% else %>
+  <li><%= @dog.employees.first %></li>
+<% end %>
+
+</ul>
